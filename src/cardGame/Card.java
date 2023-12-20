@@ -14,10 +14,11 @@ public class Card {
 	public String toString() {
 		return "Card Name: " + name +" Card Value: " + value;
 	}
+	
 	public void describe() {
 		System.out.println("Card Name: " + name +" Card Value: " + value);
 	}
-	
+		
 	//Getters and Setters
 	public int getValue() {
 		return value;

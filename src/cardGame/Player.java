@@ -9,12 +9,36 @@ public class Player {
 	private int score;
 	private String name;
 	
-	public Player(String name, List<Card> hand, int score) {
+	public Player(String name, int score) {
 		this.name = name;
-		this.hand = hand;
-		this.score = 0;
+		this.score = score;
+		this.hand = new ArrayList<Card>();
 	}
 	
+	public void describe() {
+		System.out.println(name + " " + score);
+		for(Card card : hand) {
+			card.describe();
+		}
+	}
+	
+	public Card flip() {
+		
+		Card x = hand.remove(0);
+		return x;
+		//return x.getValue();
+		//System.out.println(x);		
+		}
+	 
+	
+	public void draw(Deck deck) {
+		hand.add(deck.draw());
+	}
+	
+	public void incrementScore() {
+		score = score + 1;
+		//System.out.println(name + " " + score);
+	}
 	//Getters and Setters
 	public int getScore() {
 		return score;
