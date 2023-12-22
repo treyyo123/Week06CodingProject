@@ -48,6 +48,13 @@ public class App {
 		}
 		System.out.println("FINAL SCORE!" + " " + player1.getName() + " " + player1.getScore() + " " + player2.getName() + " " + player2.getScore());
 		
+		if(player1.getScore() > player2.getScore()) {
+			System.out.println(player1.getName().toUpperCase() + " WINS!");
+		}else if(player1.getScore() < player2.getScore()) {
+			System.out.println(player2.getName().toUpperCase() + " WINS!");
+		}else {
+			System.out.println("DRAW!");
+		}
 		//player1.describe();
 		//player2.describe();
 		//System.out.println(player1.hand.size());
