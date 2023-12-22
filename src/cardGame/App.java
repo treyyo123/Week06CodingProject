@@ -1,8 +1,5 @@
 package cardGame;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class App {
 
 	public static void main(String[] args) {
@@ -18,21 +15,17 @@ public class App {
 				player2.draw(deck);
 			}
 		}
-		//System.out.println(player1.hand.size());
-		//System.out.println(player2.hand.size());
+		
 		for(int i = 0; i < 26; i++) {			
 			Card player1Card = player1.flip();
 			Card player2Card = player2.flip();
-//			int player1Value = player1.flip().getValue();
-//			int player2Value = player2.flip().getValue();
+
 			int player1Value = player1Card.getValue();
 			int player2Value = player2Card.getValue();
-			//String player1Name = player1Card.getName();
-			//String player2Name = player2Card.getName();
-			//player1.flip();
+			
 			System.out.println(player1.getName() + " " + player1Card.getName());
 					
-			//player2.flip();
+			
 			System.out.println(player2.getName() + " " + player2Card.getName());
 			
 			if(player1Value > player2Value) {
@@ -55,10 +48,7 @@ public class App {
 		}else {
 			System.out.println("DRAW!");
 		}
-		//player1.describe();
-		//player2.describe();
-		//System.out.println(player1.hand.size());
-		//System.out.println(player2.hand.size());
+		
 	}//end of main
 
 }//end of class

@@ -26,8 +26,7 @@ public class Player {
 		
 		Card x = hand.remove(0);
 		return x;
-		//return x.getValue();
-		//System.out.println(x);		
+				
 		}
 	 
 	
@@ -37,7 +36,7 @@ public class Player {
 	
 	public void incrementScore() {
 		score = score + 1;
-		//System.out.println(name + " " + score);
+		
 	}
 	//Getters and Setters
 	public int getScore() {
